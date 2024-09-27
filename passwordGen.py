@@ -1,19 +1,19 @@
 import random
 import string
 def password(lenPassword,comp):
-    charactersDig=string.digits
-    charactersSym=string.punctuation + string.digits
-    charactersChar=string.ascii_letters + string.digits + string.punctuation
+    charactersSim=string.ascii_letters
+    charactersMed=string.ascii_letters + string.digits
+    charactersHard=string.ascii_letters + string.digits + string.punctuation
     password=''
     if comp=='simple' or comp=='s':
         for i in range(lenPassword):
-            password+=random.choice(charactersDig)
+            password+=random.choice(charactersSim)
     elif comp=="medium" or comp=='m':
         for i in range(lenPassword):
-            password+=random.choice(charactersSym)
+            password+=random.choice(charactersMed)
     elif comp=="hard" or comp=='h':
         for i in range(lenPassword):
-            password+=random.choice(charactersChar)
+            password+=random.choice(charactersHard)
     else:
         print("Enter Valid values")
     return password
