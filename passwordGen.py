@@ -17,7 +17,6 @@ def password(lenPassword,comp):
     else:
         print("Enter Valid values")
     return password
-print("Enter the lenght of Password required: ")
-lenPassword=int(input())
+lenPassword=int(input("Enter the lenght of Password required: "))
 comp=input("Choose Password Complexity(s-simple,m-medium,h-hard): ")
 print(password(lenPassword,comp))
